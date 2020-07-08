@@ -7,8 +7,9 @@ session_start();
     if (isset($_POST['user_password'])){
         if ($_POST['user_password']=="2020"){
             $_SESSION["id"]=$_POST['user_login'];
-            setcookie("id",$_SESSION["id"]);
-            header ('C:\Users\Sanchez\Documents\Iseg\ISCC-2020\ISCC-2020\Jour-01\ISCC-2020-J09\Ex_01\connexion.php');
+            var_dump($_SESSION,$_COOKIE);
+            setcookie("id",$_COOKIE["id"]);
+            //header ('C:\Users\Sanchez\Documents\Iseg\ISCC-2020\ISCC-2020\Jour-01\ISCC-2020-J09\Ex_01\connexion.php');
             exit ();
         }
         else {
